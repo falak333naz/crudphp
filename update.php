@@ -9,7 +9,14 @@
  $last_name = $_POST['last_name'];
  $password = $_POST['password'];
  $email = $_POST['email'];
- $q = " update cruddtable set id=$id, username='$username',last_name='$last_name' password='$password',email='$email' where id=$id  ";
+ $q = "update `cruddtable` SET  `id`=$id, `username`='$username',`last_name`='$last_name', `password`='$password',email='$email' where id=$id ";
+ $sql = "UPDATE cruddtable SET 
+           
+            `username`='$username', 
+             `last_name`='$last_name',  
+             `password`='password', 
+             `email`='$email', 
+              WHERE  `id`= $id ";
 
   $query = mysqli_query($con,$q);
 
